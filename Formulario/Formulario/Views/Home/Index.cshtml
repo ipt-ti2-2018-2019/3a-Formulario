@@ -1,0 +1,51 @@
+﻿
+@{
+   Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+   <meta name="viewport" content="width=device-width" />
+   <meta charset="utf-8" />
+   <title>Formulário</title>
+</head>
+<body>
+   <div>
+
+      <h2>Formulário</h2>
+
+      <!-- esta é uma linha de comentário em HTML   -->
+      @*   este é outro comentário que NÃO é visível no Cliente   *@
+
+      @*  tarefas a serem executadas pelo FORMULÁRIO
+            - nome
+            - idade
+         e depois mostrar esse dados no browser
+      *@
+
+      <form method="post">
+         qual o seu nome: <input type="text" name="nome" required="required" /> <br />
+         qual a sua idade: <input type="number"
+                                  name="idade"
+                                  required="required" 
+                                  min="0"
+                                  max="130"/> <br /><br />
+
+         <button>enviar formulário</button>
+         <input type="submit" value=" enviar formulário" />
+
+      </form>
+
+      @if(ViewBag.mensagem != "") {
+         <text>
+            <script>
+               alert("@ViewBag.mensagem");
+            </script>
+         </text>
+      }
+
+   </div>
+</body>
+</html>
